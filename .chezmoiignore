@@ -1,5 +1,5 @@
 {{ if ne .chezmoi.os "linux" }}
 .config
-{{ else if eq .chezmoi.os "windows" }}
+{{ else if ne .chezmoi.os "windows" }}
 AppData
 {{ end }}
