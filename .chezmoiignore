@@ -4,4 +4,9 @@
 AppData
 {{ end }}
 
+{{ if eq .chezmoi.fqdnHostname "PC23015" }}
+.wezterm.lua
+AppData/Roaming/alacritty/alacritty.toml
+{{ end }}
+
 README.md
