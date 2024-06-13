@@ -9,6 +9,10 @@ set incsearch
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
+nmap <space><space> <Action>(RecentFiles)
+nmap <C-S-w><C-S-w> <Action>(MoveEditorToOppositeTabGroup)
+nmap gb <Action>(GotoSuperMethod)
+nmap gi <Action>(ReSharperGotoImplementation)
 
 Plug 'easymotion/vim-easymotion' 
 nmap s <Plug>(easymotion-s)
