@@ -1,0 +1,30 @@
+layout {
+    pane
+    pane size=1 borderless=true {
+        plugin location="compact-bar"
+    }
+    swap_floating_layout {
+        floating_panes exact_panes=1 {
+            pane {
+                x "10%"
+                y "10%"
+                width "80%"
+                height "80%"
+            }
+        }
+        floating_panes exact_panes=2 {
+            pane {
+                x "0%"
+                y "10%"
+                width "50%"
+                height "80%"
+            }
+            pane {
+                x "50%"
+                y "10%"
+                width "50%"
+                height "80%"
+            }
+        }
+    }
+}
