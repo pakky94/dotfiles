@@ -31,21 +31,23 @@ vim.keymap.set('n', '<M-left>', '<C-w><')
 vim.keymap.set('n', '<M-up>', '<C-w>+')
 
 -- document existing key chains
-require('which-key').register {
-  ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-  ['<leader>d'] = { name = '[D]ebug', _ = 'which_key_ignore' },
-  ['<leader>f'] = { name = '[F]iles', _ = 'which_key_ignore' },
-  ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
-  ['<leader>gw'] = { name = '[W]orktree', _ = 'which_key_ignore' },
-  ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
-  ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-  ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-  ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
-  ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-}
+local wk = require('which-key')
+wk.add({
+  { '<leader>c',  group = '[C]ode' },
+  { '<leader>d',  group = '[D]ebug' },
+  { '<leader>f',  group = '[F]iles' },
+  { '<leader>g',  group = '[G]it' },
+  { '<leader>gw', group = '[W]orktree' },
+  { '<leader>h',  group = 'Git [H]unk' },
+  { '<leader>r',  group = '[R]ename' },
+  { '<leader>s',  group = '[S]earch' },
+  { '<leader>t',  group = '[T]oggle' },
+  { '<leader>w',  group = '[W]orkspace' },
+})
+
 -- register which-key VISUAL mode
 -- required for visual <leader>hs (hunk stage) to work
-require('which-key').register({
-  ['<leader>'] = { name = 'VISUAL <leader>' },
-  ['<leader>h'] = { 'Git [H]unk' },
+wk.add({
+  { '<leader>',  group = 'VISUAL <leader>' },
+  { '<leader>h', group = 'Git [H]unk' },
 }, { mode = 'v' })
