@@ -25,33 +25,19 @@ config.default_prog = { '/usr/bin/zsh' }
 
 config.launch_menu = launch_menu
 config.adjust_window_size_when_changing_font_size = false
+config.enable_tab_bar = false
+config.window_decorations = "TITLE | RESIZE"
+
 config.disable_default_key_bindings = true
+local act = wezterm.action
 config.keys = {
-  {
-    key = '[',
-    mods = 'SUPER|CTRL',
-    action = wezterm.action.ActivateTabRelative(-1),
-  },
-  {
-    key = ']',
-    mods = 'SUPER|CTRL',
-    action = wezterm.action.ActivateTabRelative(1),
-  },
-  {
-    key = '-',
-    mods = 'SUPER|CTRL',
-    action = wezterm.action.DecreaseFontSize,
-  },
-  {
-    key = '=',
-    mods = 'SUPER|CTRL',
-    action = wezterm.action.IncreaseFontSize,
-  },
-  {
-    key = '=',
-    mods = 'SUPER|ALT|CTRL',
-    action = wezterm.action.ResetFontSize,
-  },
+  { key = '[', mods = 'SUPER|CTRL',     action = act.ActivateTabRelative(-1), },
+  { key = ']', mods = 'SUPER|CTRL',     action = act.ActivateTabRelative(1), },
+  { key = '-', mods = 'SUPER|CTRL',     action = act.DecreaseFontSize, },
+  { key = '=', mods = 'SUPER|CTRL',     action = act.IncreaseFontSize, },
+  { key = '=', mods = 'SUPER|ALT|CTRL', action = act.ResetFontSize, },
+  { key = 'C', mods = 'SHIFT|CTRL',     action = act.CopyTo 'Clipboard' },
+  { key = 'V', mods = 'SHIFT|CTRL',     action = act.PasteFrom 'Clipboard' },
 }
 
 return config
