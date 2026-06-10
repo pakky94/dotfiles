@@ -1,7 +1,7 @@
 {{ if ne .chezmoi.os "linux" }}
-.config
-{{ else if ne .chezmoi.os "windows" }}
 AppData
+{{ else if ne .chezmoi.os "windows" }}
+private_dot_local
 {{ end }}
 
 {{ if eq .chezmoi.fqdnHostname "PC23015" }}
