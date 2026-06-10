@@ -1,5 +1,4 @@
 {{ if ne .chezmoi.os "linux" }}
-nix
 private_dot_local
 {{ else if ne .chezmoi.os "windows" }}
 AppData
@@ -13,4 +12,5 @@ AppData/Roaming/alacritty
 docs
 flake.lock
 flake.nix
+nix
 README.md
