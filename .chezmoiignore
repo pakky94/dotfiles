@@ -11,4 +11,6 @@ AppData/Roaming/alacritty
 {{ end }}
 
 docs
+flake.lock
+flake.nix
 README.md
