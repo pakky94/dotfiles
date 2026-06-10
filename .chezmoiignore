@@ -10,4 +10,5 @@ AppData
 AppData/Roaming/alacritty
 {{ end }}
 
+docs
 README.md
