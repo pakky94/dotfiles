@@ -4,7 +4,7 @@
   config.home.homeDirectory = "/home/pakky";
   config.home.stateVersion = "24.05";
 
-  config.pakky.nixConfigDir = "/home/pakky/p/dotfiles/nix";
+  config.pakky.nixConfigDir = "/home/pakky/.local/share/chezmoi/nix";
   config.pakky.hostName = "steamdeck";
 
   imports = [

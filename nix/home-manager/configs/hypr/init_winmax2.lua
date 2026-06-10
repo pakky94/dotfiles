@@ -54,7 +54,7 @@ hl.on("hyprland.start", function()
  hl.dsp.exec_cmd("waybar &")
  hl.dsp.exec_cmd("fcitx5 &")
  hl.dsp.exec_cmd("clipse -listen")
- hl.dsp.exec_cmd("(sleep10 && /home/pakky/p/dotfiles/nix/home-manager/configs/hypr/lid.sh) &")
+ hl.dsp.exec_cmd("(sleep10 && /home/pakky/.local/share/chezmoi/nix/home-manager/configs/hypr/lid.sh) &")
 end)
 
 ----------------------------------------

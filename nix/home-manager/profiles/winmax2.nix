@@ -4,7 +4,7 @@
 
   home.username = "pakky";
   home.homeDirectory = "/home/pakky";
-  pakky.nixConfigDir = "/home/pakky/p/dotfiles/nix";
+  pakky.nixConfigDir = "/home/pakky/.local/share/chezmoi/nix";
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
 

@@ -12,7 +12,7 @@ with lib;
 
   options.pakky.nixConfigDir = mkOption {
     type = types.str;
-    default = "/home/pakky/p/dotfiles/nix";
+    default = "/home/pakky/.local/share/chezmoi/nix";
     description = "Dir of nix-config repo";
   };
 
