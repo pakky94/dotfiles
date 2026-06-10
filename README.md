@@ -17,7 +17,7 @@ The nix flake installs the `chezmoi` binary via home-manager on every host and p
 On a fresh machine without nix yet, you can bootstrap chezmoi directly from nixpkgs:
 
 ```sh
-nix run nixpkgs#chezmoi -- init
+nix run nixpkgs#chezmoi -- init pakky94
 ```
 
 This creates the chezmoi working copy at `~/.local/share/chezmoi`. The nix config expects this path — see `nix/modules/config.nix` (`pakky.nixConfigDir`).
