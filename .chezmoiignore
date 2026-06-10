@@ -1,5 +1,6 @@
 {{ if ne .chezmoi.os "linux" }}
 AppData
+nix
 {{ else if ne .chezmoi.os "windows" }}
 private_dot_local
 {{ end }}
