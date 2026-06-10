@@ -4,6 +4,8 @@
 
  config.services.ssh-agent.enable = true;
 
+ config.home.packages = [ pkgs.chezmoi ];
+
  imports = [
  ./atuin
  ./git
