@@ -185,7 +185,11 @@ plugins {
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 //
+{{ if eq .chezmoi.os "windows" }}
+default_shell "pwsh"
+{{ else }}
 // default_shell "fish"
+{{ end }}
 
 // Choose the path to override cwd that zellij will use for opening new panes
 //
